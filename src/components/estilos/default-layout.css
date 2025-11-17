@@ -1,0 +1,67 @@
+.default-layout {
+  display: flex;
+  box-shadow: 0 0 10px #666;
+  justify-content: center;
+  max-width: 1100px; 
+  margin: 10px auto;
+}
+
+/* Panel lateral: empresa */
+.cont-empresa {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-right: 1px solid #e0e0e0;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+
+/* Contenido principal */
+.cont-child {
+  flex: 1; /* Toma el espacio restante */
+  min-width: 400px;
+  padding: 0 .5rem;
+}
+
+.empresa-logo {
+  text-align: center;
+}
+
+/* Opcionales: diseño de logo y textos */
+.empresa-logo img {
+  width: 18rem;
+  height: 14rem;
+  margin-bottom: 2rem;
+}
+
+.empresa-integrantes h3 {
+  font-size: 1.2rem;
+}
+
+.empresa-integrantes ul {
+  padding-left: 0;
+  margin-left: 1.5rem;
+}
+
+
+@media screen and (width < 1180px) {
+  .default-layout  {
+    margin: 0;
+    box-shadow: 0 0 0 0;
+
+    & .cont-empresa {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      min-height: fit-content;
+      padding: 1em;
+    }
+
+    & .child {
+      padding: 0 1rem;
+    }
+  }
+}
