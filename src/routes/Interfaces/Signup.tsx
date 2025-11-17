@@ -245,7 +245,7 @@ try {
   const response = await fetch('https://kao-link-backend-gestion.onrender.com/api/paises');
   const data = await response.json();
   setPaises(data);
-  console.log("Paises recibidos:", data);
+  console.log("Paises recibidos:", paises);
   const options = data.map((pais: Pais) => ({
     label: pais.nombre,
     value: pais.nombre,
