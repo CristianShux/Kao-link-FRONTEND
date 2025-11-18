@@ -5,16 +5,18 @@
   padding: 2rem 1rem;
   max-width: 600px;
   margin: auto;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   gap: 2rem;
-  min-height: 100vh;
-  min-height: fit-content;
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .error-message {
   color: red;
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 .cont-input {
@@ -68,16 +70,15 @@ label {
 .register-text a {
   color: var(--c1);
   text-decoration: none;
-  &:active {
-    color: var(--c1);
-    text-decoration: none;
-  }
-  &:visited {
-    color: var(--c1);
-    text-decoration: none;
-  }
 }
-
+.register-text a:active {
+  color: var(--c1);
+  text-decoration: none;
+}
+.register-text a:visited {
+  color: var(--c1);
+  text-decoration: none;
+}
 
 /* Responsive: pantallas mayores a 768px */
 @media (min-width: 768px) {
@@ -88,7 +89,7 @@ label {
 
 @media (width < 400px) {
   .login-form {
-    padding: 0.5rem;
+    padding: 1rem 0.5rem; /* Menos padding en pantallas muy chicas */
     gap: 0.8rem;
     display: flex;
     justify-content: center;
@@ -132,7 +133,6 @@ label {
   }
 }
 
-
 .overlay {
   position: absolute;
   top: 0;
@@ -144,11 +144,4 @@ label {
   align-items: center;
   justify-content: center;
   z-index: 10;
-}
-
-.error-message {
-  color: red;
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: bold;
 }
