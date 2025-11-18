@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_URL= "https://kao-link-backend-gestion.onrender.com";
 
-export const WS_URL = "wss://kaolinkwebsocket.duckdns.org/ws/"; // URL del WebSocket
+export const WS_URL = "https://shainflow.duckdns.org/ws/"; // URL del WebSocket
 
 // Instancia de Axios configurada
 const api = axios.create({
